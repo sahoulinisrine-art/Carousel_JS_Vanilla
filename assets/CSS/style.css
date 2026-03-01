@@ -50,7 +50,7 @@ nav {
     top: 0;
     width: 100%;
     z-index: 200;
-    background-color: transparent;
+    background-color: rgba(34, 16, 2, 0.656);
     transition: background-color 0.3s ease; 
 }
 
@@ -111,7 +111,7 @@ nav {
 /* HEADER CAROUSEL */
 .carousel {
     position: relative;
-    height: 550px;
+    height: 700px;
     color: white;
     overflow: visible;
 }

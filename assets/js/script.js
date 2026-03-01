@@ -84,6 +84,19 @@ dropdown.addEventListener("mouseout", function() {
     dropdownMenu.classList.remove("visible");
 });
 
+// fleche deviennent noir avec moueover
+
+const fleches = document.querySelectorAll('#prev, #next');
+
+fleches.forEach(fleche => {
+    fleche.addEventListener('mouseover', function() {
+        this.style.color = 'black';
+    });
+    fleche.addEventListener('mouseout', function() {
+        this.style.color = 'orange';
+    });
+});
+
 // la nav qui change 
 
 const navBackround = document.querySelector(".navBackround");

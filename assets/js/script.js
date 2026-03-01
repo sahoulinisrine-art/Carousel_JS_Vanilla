@@ -149,3 +149,22 @@ cards.forEach(card => {
         priceBox.style.padding = '3px 10px';
     });
 });
+
+// Section 5 OUR TEAM
+
+const teamCards = document.querySelectorAll('.teamCard');
+
+teamCards.forEach(card => {
+    const info = card.querySelector('.teamInfo');
+    const social = card.querySelector('.teamSocial');
+
+    card.addEventListener('mouseover', function() {
+        social.style.transform = 'translateY(0)';
+        info.style.opacity = '0';
+    });
+
+    card.addEventListener('mouseout', function() {
+        social.style.transform = 'translateY(100%)';
+        info.style.opacity = '1';
+    });
+});

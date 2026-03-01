@@ -29,9 +29,11 @@ h1 {
     color: orange;
     font-size: 35px;
 }
-i{
+
+i {
     color: orange;
 }
+
 .orange {
     color: orange;
 }
@@ -53,7 +55,7 @@ nav {
     width: 100%;
     z-index: 200;
     background-color: rgba(34, 16, 2, 0.656);
-    transition: background-color 0.3s ease; 
+    transition: background-color 0.3s ease;
 }
 
 .navBackround.scrolled {
@@ -66,6 +68,7 @@ nav {
     color: black;
     align-items: center;
 }
+
 .dropdown {
     position: relative;
 }
@@ -86,19 +89,22 @@ nav {
 .dropdown-menu.visible {
     display: flex;
 }
-.gauche{
+
+.gauche {
     display: flex;
     flex-direction: row;
     gap: 10px;
     align-items: center;
-  
+
 }
-.call{
+
+.call {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    
+
 }
+
 .iconeTel {
     fill: orange;
     width: 20px;
@@ -107,7 +113,7 @@ nav {
     border: solid 0.5px white;
     border-radius: 50px;
     padding: 10px;
-   
+
 }
 
 /* HEADER CAROUSEL */
@@ -193,99 +199,103 @@ nav {
 /* SECTION 1 CARDS */
 
 .listcard {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 100px;
-  margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 100px;
+    margin-bottom: 10px;
 }
 
 .card {
-  background-color: #FDF5EB;
-  text-align: center;
-  padding: 50px;
-  padding-bottom: 100px;
-  width: 200px;
-  height:  150px;
-  border-radius: 5px;
-  transition:
-    transform 0.15s ease,
-    box-shadow 0.15s ease,
-    border-color 0.15s ease;
+    background-color: #FDF5EB;
+    text-align: center;
+    padding: 50px;
+    padding-bottom: 100px;
+    width: 200px;
+    height: 150px;
+    border-radius: 5px;
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        border-color 0.15s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.10);
-  background-color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.10);
+    background-color: white;
 }
 
 h4 {
-  font-size: 37px;
+    font-size: 37px;
 }
 
 
 /* Section 2 ABOUT */
 
 .section2 {
-  display: flex;
+    display: flex;
 }
 
 .beigeA {
-  background-color: #FDF5EB;
-  padding: 1.5rem;
-  border-radius: 10px;
+    background-color: #FDF5EB;
+    padding: 1.5rem;
+    border-radius: 10px;
 }
 
 .orangeA {
-  background-color: #E9A636;
-  padding: 10rem;
-  z-index: 1;
+    background-color: #E9A636;
+    padding: 10rem;
+    z-index: 1;
 }
 
 .dispoImg {
-  display: flex;
-  position: relative;
-  margin: 200px;
+    display: flex;
+    position: relative;
+    margin: 200px;
 }
 
 .about-1 {
-  position: absolute;
-  left: -35%;
-  top: -15%;
-  border-radius: 5px;
+    position: absolute;
+    left: -35%;
+    top: -15%;
+    border-radius: 5px;
 }
 
 .about-2 {
-  position: absolute;
-  right: -35%;
-  bottom: -15%;
-  border-radius: 5px;
+    position: absolute;
+    right: -35%;
+    bottom: -15%;
+    border-radius: 5px;
 }
 
 .textAbout {
-  margin-top: 120px;
-  margin-right: 150px;
+    margin-top: 120px;
+    margin-right: 150px;
 }
+
 .textAbout p {
-     color: rgb(114, 112, 112);
-     margin: 5px 0;
+    color: rgb(114, 112, 112);
+    margin: 5px 0;
     line-height: 1.5;
 }
+
 .textAbout h3 {
-     color: orange;
-     font-size: 14px;
-     font-weight: lighter;
+    color: orange;
+    font-size: 14px;
+    font-weight: lighter;
 
 }
+
 .textAbout h4 {
-   margin: 5px 0;
-   margin-bottom: 20px;
+    margin: 5px 0;
+    margin-bottom: 20px;
 }
+
 .valid {
-  display: flex;
-  gap: 10rem;
+    display: flex;
+    gap: 10rem;
 }
 
 .bReadMore {
@@ -297,7 +307,7 @@ h4 {
     cursor: pointer;
     font-size: 15px;
     color: white;
-    font-weight:500;
+    font-weight: 500;
 }
 
 .bReadMore:hover {
@@ -307,35 +317,36 @@ h4 {
 /* Section 3 call */
 
 
-.callS {
-  margin-left: 5%;
-  margin-right: 5%;
-  background-color: #FDF5EB;
-  height: 550px;
+.bakeryProducts {
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #FDF5EB;
+    margin-bottom: 20px;
 }
 
-.orangeCall{
-  margin-left: 30px;
-  margin-right: 30px;
-  height: 150px;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: #eaa42c;
+.orangeCall {
+    margin-left: 30px;
+    margin-right: 30px;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #eaa42c;
 }
 
 .TitreCall {
-  color: #FDF5EB;
-  margin: 0px;
-  font-size: 50px;
+    color: #FDF5EB;
+    margin: 0px;
+    font-size: 50px;
 }
 
 .phonebaige {
-  color: #FDF5EB;
-  font-size: 2.5rem;
-  transform: scaleX(-1);
-  margin: 10px;
+    color: #FDF5EB;
+    font-size: 2.5rem;
+    transform: scaleX(-1);
+    margin: 10px;
 }
+
 .flexphone {
     display: flex;
     flex-direction: row;
@@ -356,4 +367,96 @@ h4 {
     font-weight: bold;
 }
 
+/* Section 3 PRODUCTS */
+.titleProducts {
+    text-align: center;
+    margin-top: 100px;
+}
 
+.titleProducts h4 {
+    margin: 0;
+}
+
+.titleProducts h3 {
+    color: #eaa42c;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.listcard2 {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    margin: 30px;
+    padding-bottom: 100px;
+}
+
+.box {
+    width: 600px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 1s ease, transform 1s ease, box-shadow 1.5s ease;
+}
+
+.box img {
+    width: 100%;
+    height: 300px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    /* même hauteur que l'image */
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.7s ease;
+}
+
+.overlay i {
+    color: orange;
+    font-size: 1.5rem;
+    border: 2px solid orange;
+    border-radius: 50%;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.4s ease 0.2s;
+}
+
+.textCard {
+    padding: 20px;
+}
+
+.price {
+     font-weight: bold;
+    margin: 0 auto;
+    border: 1px solid orange;
+    border-radius: 30px;
+    width: 90px;
+    color: grey;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textCard h4 {
+    margin: 35px 0;
+    font-size: 2.36rem;
+}
+
+.textCard p {
+    color: grey;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}

@@ -108,3 +108,44 @@ window.addEventListener("scroll", function() {
         navBackround.classList.remove("scrolled");
     }
 });
+
+// Section 3 box Product 
+
+const cards = document.querySelectorAll('.listcard2 .box');
+
+cards.forEach(card => {
+    const overlay = card.querySelector('.overlay');
+    const icon = card.querySelector('.overlay i');
+    const texte = card.querySelector('.textCard p');
+    const titre = card.querySelector('.textCard h4');
+    const prix = card.querySelector('.price p');
+    const priceBox = card.querySelector('.price');
+
+    card.addEventListener('mouseover', function() {
+        this.style.backgroundColor = '#E9A636';
+        this.style.transform = 'translateY(-5px)';
+        this.style.boxShadow = '0px 10px 30px rgba(0,0,0,0.15)';
+        overlay.style.backgroundColor = 'rgba(0,0,0,0.4)';
+        icon.style.opacity = '1';
+        texte.style.color = 'white';
+        titre.style.color = 'white';
+        prix.style.color = 'white';
+        priceBox.style.border = '1px solid white';
+        priceBox.style.borderRadius = '20px';
+        priceBox.style.padding = '3px 10px';
+    });
+
+    card.addEventListener('mouseout', function() {
+        this.style.backgroundColor = 'white';
+        this.style.transform = 'translateY(0px)';
+        this.style.boxShadow = 'none';
+        overlay.style.backgroundColor = 'rgba(0,0,0,0)';
+        icon.style.opacity = '0';
+        texte.style.color = 'grey';
+        titre.style.color = 'black';
+        prix.style.color = 'grey';
+        priceBox.style.border = '1px solid orange';
+        priceBox.style.borderRadius = '20px';
+        priceBox.style.padding = '3px 10px';
+    });
+});

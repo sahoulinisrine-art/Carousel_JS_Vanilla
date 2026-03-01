@@ -1,13 +1,181 @@
-
 /* CACHER */
 .hidden {
-  display: none;
+    display: none;
 }
 
 /* HIGHLIGHT */
 .highlight {
-  background: yellow;
+    background: yellow;
 }
 
-/* NAVBAR */
+/* elements style  */
+body {
+    margin: 0;
 
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    color: orange;
+}
+
+.orange {
+    color: orange;
+}
+
+/* HEADER */
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2%;
+    margin-left: 2%;
+
+}
+
+.navBackround {
+    background-color: rgb(26, 19, 14);
+    position: relative;
+    z-index: 200;
+}
+
+.pagesNav {
+    display: flex;
+    margin-top: 25px;
+    gap: 30px;
+    color: black;
+}
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    background-color: rgba(250, 227, 211, 0.486);
+    border-radius: 5px;
+    padding: 5px;
+    min-width: 150px;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 999;
+}
+
+.dropdown-menu.visible {
+    display: flex;
+}
+.gauche{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  
+}
+.call{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+.iconeTel {
+    fill: orange;
+    width: 20px;
+    height: 20px;
+    transform: rotate(270deg);
+    border: solid 0.5px white;
+    border-radius: 50px;
+    padding: 10px;
+   
+}
+
+/* HEADER CAROUSEL */
+.carousel {
+    position: relative;
+    height: 550px;
+    color: white;
+    overflow: visible;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
+
+#btn1 {
+    background-color: orange;
+    border-radius: 25px;
+    color: white;
+    font-size: 16px;
+    padding: 15px 45px;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.slide::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.slide.active {
+    display: block;
+}
+
+.content {
+    position: absolute;
+    bottom: 30%;
+    left: 5%;
+}
+
+.losange {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    z-index: 5;
+}
+
+#prev {
+    position: absolute;
+    bottom: -15px;
+    left: 48%;
+    z-index: 10;
+    font-size: 30px;
+    color: orange;
+    cursor: pointer;
+}
+
+#next {
+    position: absolute;
+    bottom: -15px;
+    left: 51%;
+    z-index: 10;
+    font-size: 30px;
+    color: orange;
+    cursor: pointer;
+}

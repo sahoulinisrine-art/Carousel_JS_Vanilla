@@ -4,26 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/CSS/style.css">
     <title>Boulangerie </title>
 </head>
 
 <body>
     <header>
-        <nav>
-            <h2>
-                Baker
-            </h2>
-            <ul class="pagesNav">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./services.html">Services</a></li>
-                <li><a href="./products.html">Products</a></li>
-                <li><a href="./pages.html">Pages</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="navBackround">
+            <nav>
+                <h1>
+                    Baker
+                </h1>
+                <ul class="pagesNav">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./services.html">Services</a></li>
+                    <li><a href="./products.html">Products</a></li>
+                    <li class="dropdown">
+                        <a href="#">Pages <i class="fa-sharp fa-solid fa-angle-down"></i></a>
+                        <ul class="dropdown-menu hidden">
+                            <li><a style="color: rgba(0, 0, 0, 0.800)" href="#">Our Team</a></li>
+                            <li><a style="color: rgba(0, 0, 0, 0.800)" href="#">Testimonial</a></li>
+                            <li><a style="color: rgba(0, 0, 0, 0.800)" href="#">404 Page</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+                <div class="gauche">
+                    <svg class="iconeTel" viewBox="0 0 24 24">
+                        <path
+                            d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"""
+                            ) />>
+                    </svg>
+                    <div class="call">
+                        <p style="color: orange; margin: 0; font-size: 14px;">Call Us</p>
+                        <p style="color: white;margin: 0; letter-spacing: 1px;">+012 345 6789</p>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="carousel">
 
+            <div class="slide active" data-bg="./assets/img/carousel-1.jpg" data-uptitle="// THE BEST BAKERY"
+                data-title="We Bake With Passion"
+                data-text="Vero elitr justo clita lorem. Ipsum dolor stet sit diam rebum ipsum" data-btn1="Read More">
+            </div>
+
+            <div class="slide" data-bg="./assets/img/carousel-2.jpg" data-uptitle="// THE BEST BAKERY"
+                data-title="We Bake With Passion"
+                data-text="Vero elitr justo clita lorem. Ipsum dolor stet sit diam rebum ipsum" data-btn1="Read More">
+            </div>
+
+            <div class="content">
+                <strong>
+                    <p class="orange" id="uptitle"></p>
+                </strong>
+                <h2 style="font-size: 70px; margin: 0; color: rgba(255, 255, 255, 0.803)" id="title"></h2>
+                <p style="font-size: 18px;color: rgba(255, 255, 255, 0.803)" id="text"></p>
+                <button style="margin-top: 20px;" id="btn1"></button>
+            </div>
+            <div class="losange"></div>
+            <span class="orange" id="prev">&lt;</span>
+            <span class="orange" id="next">&gt;</span>
+
+        </div>
     </header>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

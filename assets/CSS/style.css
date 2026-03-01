@@ -29,7 +29,9 @@ h1 {
     color: orange;
     font-size: 35px;
 }
-
+i{
+    color: orange;
+}
 .orange {
     color: orange;
 }
@@ -223,8 +225,81 @@ h4 {
   font-size: 37px;
 }
 
-.fs {
-  color: #E9A636;
-  font-size: 60px;
-  margin: 10px;
+
+/* Section 2 ABOUT */
+
+.section2 {
+  display: flex;
+}
+
+.beigeA {
+  background-color: #FDF5EB;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.orangeA {
+  background-color: #E9A636;
+  padding: 10rem;
+  z-index: 1;
+}
+
+.dispoImg {
+  display: flex;
+  position: relative;
+  margin: 200px;
+}
+
+.about-1 {
+  position: absolute;
+  left: -35%;
+  top: -15%;
+  border-radius: 5px;
+}
+
+.about-2 {
+  position: absolute;
+  right: -35%;
+  bottom: -15%;
+  border-radius: 5px;
+}
+
+.textAbout {
+  margin-top: 120px;
+  margin-right: 150px;
+}
+.textAbout p {
+     color: rgb(114, 112, 112);
+     margin: 5px 0;
+    line-height: 1.5;
+}
+.textAbout h3 {
+     color: orange;
+     font-size: 14px;
+     font-weight: lighter;
+
+}
+.textAbout h4 {
+   margin: 5px 0;
+   margin-bottom: 20px;
+}
+.valid {
+  display: flex;
+  gap: 10rem;
+}
+
+.bReadMore {
+    padding: 16px 40px;
+    margin-top: 20px;
+    background-color: #e99c18;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+    font-weight:500;
+}
+
+.bReadMore:hover {
+    background-color: rgba(255, 166, 0, 0.822);
 }

@@ -27,6 +27,7 @@ ul {
 
 h1 {
     color: orange;
+    font-size: 35px;
 }
 
 .orange {
@@ -52,9 +53,9 @@ nav {
 
 .pagesNav {
     display: flex;
-    margin-top: 25px;
     gap: 30px;
     color: black;
+    align-items: center;
 }
 .dropdown {
     position: relative;

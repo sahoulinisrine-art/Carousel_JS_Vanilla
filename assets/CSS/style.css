@@ -460,3 +460,109 @@ h4 {
     font-size: 0.9rem;
     line-height: 1.4;
 }
+/* Section Service */
+.servicesSection {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px;
+    gap: 80px;
+   
+}
+.TitreServiceUp h3{
+color: orange;
+font-size: 15px;
+margin-bottom:10px;
+font-weight: lighter;
+}
+.TitreServiceUp h4{
+color: black;
+margin:0;
+}
+.servicesGauche {
+    display: flex;
+    flex-direction: column;
+}
+.servicesGauche p{
+    line-height: 1.5;
+}
+
+.servicesDroite {
+    display: flex;
+    position: relative;
+    width: 400px;
+    height: 500px;
+    margin: 90px;
+}
+
+.servicesFondBeige {
+    background-color: #FDF5EB;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50px;
+    left: 20px;
+}
+
+.servicesFondOrange {
+    background-color: #E9A636;
+    width: 160px;
+    height: 320px;
+    position: absolute;
+    top: 80px;
+    left: 160px;
+    z-index: 1;
+}
+
+.servicesImg1 {
+    position: absolute;
+    left: -230px;
+    top: -50px;
+    border-radius: 5px;
+    z-index: 2;
+    width: 300px;
+}
+
+.servicesImg2 {
+    position: absolute;
+    right: -180px;
+    bottom: 30px;
+    border-radius: 5px;
+    z-index: 3;
+    width: 300px;
+}
+
+.serviceIcone {
+    color: white;
+    background-color: #E9A636;
+    border-radius: 50%;
+    padding: 1rem;
+    margin: 10px;
+}
+
+.serviceIconeTitre {
+    display: flex;
+    align-items: center;
+    width: 60%;
+}
+
+.servicesCards {
+    display: flex;
+    gap: 30px;
+}
+
+.servicesColonne {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.serviceIconeTitre h4 {
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
+
+.servicesColonne p {
+    margin-top: 0px;
+}

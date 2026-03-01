@@ -46,9 +46,16 @@ nav {
 }
 
 .navBackround {
-    background-color: rgb(26, 19, 14);
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
     z-index: 200;
+    background-color: transparent;
+    transition: background-color 0.3s ease; 
+}
+
+.navBackround.scrolled {
+    background-color: rgb(26, 19, 14);
 }
 
 .pagesNav {

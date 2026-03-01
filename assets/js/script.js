@@ -83,3 +83,15 @@ dropdown.addEventListener("mouseout", function() {
     dropdownMenu.classList.add("hidden");
     dropdownMenu.classList.remove("visible");
 });
+
+// la nav qui change 
+
+const navBackround = document.querySelector(".navBackround");
+
+window.addEventListener("scroll", function() {
+    if (window.scrollY > 50) {
+        navBackround.classList.add("scrolled");
+    } else {
+        navBackround.classList.remove("scrolled");
+    }
+});

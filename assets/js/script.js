@@ -18,7 +18,7 @@ function updateSlide(i) {
     }
 
     // activer slide
-    slides[i].classList.add("active");
+        slides[i].classList.add("active");
 
     // récupérer data
     const bg = slides[i].dataset.bg;
@@ -171,77 +171,118 @@ teamCards.forEach(card => {
 
 
 // SECTION REVIEW
-const reviewsCards = document.querySelectorAll('.reviewCard');
+
 const conteneur = document.querySelector('.reviewsCards');
 const wrapper = document.querySelector('.reviewsCardsWrapper');
-let indexActuel = 0;
-const cardsVisibles = 3;
-const totalCards = reviewsCards.length;
-const gap = 16;
-
 const boutons = document.querySelectorAll('.reviewsBoutonCercle');
 const boutonGauche = boutons[0];
 const boutonDroite = boutons[1];
 
-function initialiser() {
+const gap = 16;
+const cardsVisibles = 3;
+let indexActuel = 0;
+let isAnimating = false;
+
+const originalCards = Array.from(document.querySelectorAll('.reviewCard'));
+const totalOriginal = originalCards.length;
+
+// Cloner pour boucle infinie : ajouter copies avant et après
+function setupClones() {
+    // Ajouter les dernières cartes au début
+    for (let i = totalOriginal - 1; i >= totalOriginal - cardsVisibles; i--) {
+        const clone = originalCards[i].cloneNode(true);
+        clone.classList.add('clone');
+        conteneur.insertBefore(clone, conteneur.firstChild);
+    }
+    // Ajouter les premières cartes à la fin
+    for (let i = 0; i < cardsVisibles; i++) {
+        const clone = originalCards[i].cloneNode(true);
+        clone.classList.add('clone');
+        conteneur.appendChild(clone);
+    }
+}
+
+function getCardWidth() {
     const largeurWrapper = wrapper.offsetWidth;
-    const largeurCard = (largeurWrapper - (gap * (cardsVisibles - 1))) / cardsVisibles;
-    reviewsCards.forEach(card => {
+    return (largeurWrapper - gap * (cardsVisibles - 1)) / cardsVisibles;
+}
+
+function setCardWidths() {
+    const largeurCard = getCardWidth();
+    const allCards = document.querySelectorAll('.reviewCard');
+    allCards.forEach(card => {
         card.style.width = largeurCard + 'px';
         card.style.minWidth = largeurCard + 'px';
     });
 }
 
-function glisser() {
-    const largeurWrapper = wrapper.offsetWidth;
-    const largeurCard = (largeurWrapper - (gap * (cardsVisibles - 1))) / cardsVisibles;
-    const deplacement = indexActuel * (largeurCard + gap);
-    conteneur.style.transform = `translateX(-${deplacement}px)`;
+function goToIndex(index, animate = true) {
+    const largeurCard = getCardWidth();
+    const offset = (index + cardsVisibles) * (largeurCard + gap);
+    if (!animate) {
+        conteneur.style.transition = 'none';
+    } else {
+        conteneur.style.transition = 'transform 0.5s ease';
+    }
+    conteneur.style.transform = `translateX(-${offset}px)`;
 }
 
-window.addEventListener('load', initialiser);
+function init() {
+    setupClones();
+    setCardWidths();
+    goToIndex(indexActuel, false);
+    // Hover couleur texte
+    document.querySelectorAll('.reviewCard').forEach(card => {
+        card.addEventListener('mouseover', function () {
+            this.querySelector('.reviewNom h4').style.color = 'white';
+            this.querySelector('.reviewNom p').style.color = 'white';
+            this.querySelector('.reviewTexte p').style.color = 'white';
+        });
+        card.addEventListener('mouseout', function () {
+            this.querySelector('.reviewNom h4').style.color = 'black';
+            this.querySelector('.reviewNom p').style.color = 'grey';
+            this.querySelector('.reviewTexte p').style.color = 'grey';
+        });
+    });
+}
 
-boutonDroite.addEventListener('click', function() {
+boutonDroite.addEventListener('click', function () {
+    if (isAnimating) return;
+    isAnimating = true;
     indexActuel++;
-    if (indexActuel > totalCards - cardsVisibles) {
-        indexActuel = 0;
-        conteneur.style.transition = 'none';
-        conteneur.style.transform = 'translateX(0)';
-        setTimeout(() => { conteneur.style.transition = 'transform 0.5s ease'; }, 50);
-        return;
-    }
-    glisser();
+    goToIndex(indexActuel);
 });
 
-boutonGauche.addEventListener('click', function() {
+boutonGauche.addEventListener('click', function () {
+    if (isAnimating) return;
+    isAnimating = true;
     indexActuel--;
-    if (indexActuel < 0) {
-        indexActuel = totalCards - cardsVisibles;
-        conteneur.style.transition = 'none';
-        glisser();
-        setTimeout(() => { conteneur.style.transition = 'transform 0.5s ease'; }, 50);
-        return;
+    goToIndex(indexActuel);
+});
+
+conteneur.addEventListener('transitionend', function () {
+    isAnimating = false;
+    // Saut silencieux si on dépasse les bornes
+    if (indexActuel >= totalOriginal) {
+        indexActuel = 0;
+        goToIndex(indexActuel, false);
+    } else if (indexActuel < 0) {
+        indexActuel = totalOriginal - 1;
+        goToIndex(indexActuel, false);
     }
-    glisser();
 });
 
-reviewsCards.forEach(card => {
-    const nom = card.querySelector('.reviewNom h4');
-    const profession = card.querySelector('.reviewNom p');
-    const texte = card.querySelector('.reviewTexte p');
-
-    card.addEventListener('mouseover', function() {
-        nom.style.color = 'white';
-        profession.style.color = 'white';
-        texte.style.color = 'white';
-    });
-
-    card.addEventListener('mouseout', function() {
-        nom.style.color = 'black';
-        profession.style.color = 'grey';
-        texte.style.color = 'grey';
-    });
+window.addEventListener('load', init);
+window.addEventListener('resize', () => {
+    setCardWidths();
+    goToIndex(indexActuel, false);
 });
+// https://codepen.io/Marouen/pen/OxyEEY
+
+// ===============================================================
+
+
+
 
 // FOOTER
 

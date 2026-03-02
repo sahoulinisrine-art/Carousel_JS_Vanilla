@@ -50,7 +50,7 @@ nav {
     top: 0;
     width: 100%;
     z-index: 200;
-    background-color: rgba(34, 16, 2, 0.656);
+    
     transition: background-color 0.3s ease;
 }
 
@@ -324,6 +324,7 @@ h4 {
 .TitreCall {
     color: #FDF5EB;
     margin: 0px;
+    margin-left: 20px;
     font-size: 50px;
 }
 
@@ -340,18 +341,23 @@ h4 {
     align-items: center;
     gap: 10px;
 }
-
+.flexphone i{
+transform: scale(2) rotate(100deg);
+margin-right: 30px;
+}
 .tphone p {
     margin: 0;
     color: #FDF5EB;
-    font-size: 0.9rem;
+    font-weight: bolder;
+    font-size: 20px;;
 }
 
 .tphone h4 {
     margin: 0;
     color: #FDF5EB;
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 45px;
+    /* font-weight: bold; */
+    font-family:Tahoma, sans-serif;
 }
 
 /* SECTION 3 PRODUCTS */

@@ -242,3 +242,19 @@ reviewsCards.forEach(card => {
         texte.style.color = 'grey';
     });
 });
+
+// FOOTER
+
+const footerTextes = document.querySelectorAll('.footerLiens p, .footerAdresse p');
+
+footerTextes.forEach(p => {
+    p.addEventListener('mouseover', function() {
+        this.style.color = '#E9A636';
+        this.style.transform = 'translateX(5px)';
+
+    });
+    p.addEventListener('mouseout', function() {
+        this.style.color = 'rgba(255,255,255,0.8)';
+        this.style.transform = 'translateX(0)';
+    });
+});

@@ -824,3 +824,79 @@ h4 {
     font-size: 1rem;
     cursor: pointer;
 }
+
+/* FOOTER */
+footer {
+    background-color: #1a1008;
+    color: white;
+    padding: 3rem 0 2rem;
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0 50px;
+    margin-bottom: 30px;
+}
+
+.footerTitre {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 0.12em;
+    color: white;
+}
+
+.footerAdresse p {
+    color: rgba(255,255,255,0.8);
+    margin: 10px 0;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footerLiens p {
+    color: rgba(255,255,255,0.8);
+    margin: 10px 0;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footerReseaux {
+    display: flex;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.footerIcone {
+    border-radius: 50%;
+    padding: 10px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footerIcone:hover {
+    background-color: gray;
+    opacity: 80%;
+}
+
+.footerGalerieRangee {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.footerGalerieRangee img {
+    border: 3px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.footerGalerieRangee img:hover {
+    opacity: 70%;
+}

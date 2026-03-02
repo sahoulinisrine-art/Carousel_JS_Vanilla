@@ -900,3 +900,29 @@ footer {
 .footerGalerieRangee img:hover {
     opacity: 70%;
 }
+
+/* BOUTTOOONNN */
+.boutonHaut {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #E9A636;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 999;
+    transition: background-color 0.3s ease;
+}
+
+.boutonHaut:hover {
+    background-color: black;
+}
+
+.boutonHaut i {
+    color: white;
+    font-size: 1.2rem;
+}

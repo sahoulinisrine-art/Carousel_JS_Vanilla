@@ -258,3 +258,13 @@ footerTextes.forEach(p => {
         this.style.transform = 'translateX(0)';
     });
 });
+
+// Bouton retour en haut
+const boutonHaut = document.querySelector('.boutonHaut');
+
+boutonHaut.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});

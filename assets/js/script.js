@@ -30,7 +30,7 @@ function updateSlide(i) {
     // appliquer background
     slides[i].style.backgroundImage = "url(" + bg + ")";
 
-    // changer contenu
+    // changer contenu ( là c est le meme texte)
     uptitle.textContent = u;
     title.textContent = t;
     text.textContent = p;
@@ -187,6 +187,7 @@ const originalCards = Array.from(document.querySelectorAll('.reviewCard'));
 const totalOriginal = originalCards.length;
 
 // Cloner pour boucle infinie : ajouter copies avant et après
+
 function setupClones() {
     // Ajouter les dernières cartes au début
     for (let i = totalOriginal - 1; i >= totalOriginal - cardsVisibles; i--) {
@@ -296,7 +297,7 @@ footerTextes.forEach(p => {
     });
     p.addEventListener('mouseout', function() {
         this.style.color = 'rgba(255,255,255,0.8)';
-        this.style.transform = 'translateX(0)';
+        this.style.transform = 'tran';
     });
 });
 
@@ -306,6 +307,7 @@ const boutonHaut = document.querySelector('.boutonHaut');
 boutonHaut.addEventListener('click', function() {
     window.scrollTo({
         top: 0,
-        behavior: 'smooth'
+        behavior: 'smooth',
     });
 });
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo

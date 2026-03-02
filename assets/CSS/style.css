@@ -929,7 +929,8 @@ footer {
     align-items: center;
     cursor: pointer;
     z-index: 999;
-    transition: background-color 0.3s ease;
+    transition: background-color 2s ease;
+    
 }
 
 .boutonHaut:hover {
